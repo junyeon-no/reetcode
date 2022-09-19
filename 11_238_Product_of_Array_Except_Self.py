@@ -3,17 +3,6 @@ from typing import List
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         rst = []
-        for i in range(len(nums)):
-            gob = 1
-            for j,n in enumerate(nums):
-                if j == i : continue
-                gob*=n
-            rst.append(gob)
-        return rst
-
-class Solution2:
-    def productExceptSelf(self, nums: List[int]) -> List[int]:
-        rst = []
         p = 1
         #왼쪽 곱셈
         for i in range(0, len(nums)):
@@ -27,5 +16,5 @@ class Solution2:
         return rst
 
 nums =  [1,2,3,4]
-s = Solution2()
+s = Solution()
 print(s.productExceptSelf(nums))
